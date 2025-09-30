@@ -7,3 +7,6 @@ node_modules
 dist
 dist-ssr
 *.local
+README-DEPLOY-STATUS.md
+DEPLOY.md
+DEPLOY.md

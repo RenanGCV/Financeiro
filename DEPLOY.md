@@ -136,6 +136,16 @@ dist/
 - Netlify: criar arquivo `_redirects` com `/* /index.html 200`
 - Vercel: `vercel.json` já está configurado
 
+### Erro no Vercel: "pattern doesn't match any Serverless Functions"
+- Esse erro foi corrigido na versão atual do `vercel.json`
+- Se ainda aparecer, remova a seção `functions` do arquivo
+- Para SPAs React, use apenas `rewrites` para redirecionamento
+
+### Build falha no Vercel
+- Verifique se as variáveis de ambiente estão configuradas
+- Confirme se o Node.js version é compatível (18+)
+- Verifique os logs detalhados no painel do Vercel
+
 ## 📊 Monitoramento
 
 Após o deploy, monitore:
