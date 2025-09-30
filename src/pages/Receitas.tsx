@@ -4,8 +4,6 @@ import { useAuth } from '../contexts/AuthContext';
 import { Plus, Edit2, Trash2, DollarSign, Calendar, FileText } from 'lucide-react';
 import { TagSelect } from '../components/TagSelect';
 import { CustomSwitch } from '../components/CustomSwitch';
-import { DatePicker } from '../components/DatePicker';
-import { formatDateForInput, formatDateForDisplay } from '../utils/currency';
 
 interface Receita {
   id: string;
