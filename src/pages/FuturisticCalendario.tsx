@@ -5,11 +5,8 @@ import {
   Calendar, 
   Plus, 
   Minus, 
-  DollarSign, 
   TrendingUp, 
   TrendingDown, 
-  AlertTriangle, 
-  Eye, 
   Calculator,
   Target,
   Zap,
@@ -46,7 +43,6 @@ export const FuturisticCalendario: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [mesAtual, setMesAtual] = useState(new Date());
   const [diasCalendario, setDiasCalendario] = useState<DiaCalendario[]>([]);
-  const [diaSelecionado, setDiaSelecionado] = useState<number | null>(null);
   const [modalOpen, setModalOpen] = useState(false);
   
   // Estados do modal de simulação
@@ -365,7 +361,6 @@ export const FuturisticCalendario: React.FC = () => {
           {diasCalendario.map((diaInfo, index) => (
             <div
               key={index}
-              onClick={() => diaInfo.isCurrentMonth && setDiaSelecionado(diaInfo.dia)}
               className={`
                 relative p-3 rounded-xl border-2 transition-all duration-300 cursor-pointer
                 ${getStatusColor(diaInfo.status, diaInfo.isCurrentMonth)}
