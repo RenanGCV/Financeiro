@@ -48,7 +48,7 @@ export const FuturisticLayout: React.FC = () => {
             <div className="w-10 h-10 bg-gradient-to-br from-accent-gold to-accent-orange rounded-xl flex items-center justify-center animate-pulse-glow">
               <DollarSignIcon className="w-6 h-6 text-dark-primary" />
             </div>
-            <div className={`transition-opacity duration-300 ${sidebarOpen || 'lg:opacity-100' ? 'opacity-100' : 'opacity-0 lg:opacity-100'}`}>
+            <div className={`transition-opacity duration-300 ${sidebarOpen ? 'opacity-100' : 'opacity-0 lg:opacity-100'}`}>
               <h1 className="text-xl font-bold text-text-primary">FinanceIA</h1>
               <p className="text-xs text-text-muted">Gestão Inteligente</p>
             </div>
@@ -62,7 +62,7 @@ export const FuturisticLayout: React.FC = () => {
                   {user?.email?.charAt(0).toUpperCase()}
                 </span>
               </div>
-              <div className={`transition-opacity duration-300 ${sidebarOpen || 'lg:opacity-100' ? 'opacity-100' : 'opacity-0 lg:opacity-100'}`}>
+              <div className={`transition-opacity duration-300 ${sidebarOpen ? 'opacity-100' : 'opacity-0 lg:opacity-100'}`}>
                 <p className="text-sm font-medium text-text-primary truncate">
                   {user?.email?.split('@')[0]}
                 </p>
@@ -87,7 +87,7 @@ export const FuturisticLayout: React.FC = () => {
                     active ? 'text-accent-gold' : 'text-text-muted group-hover:text-accent-gold'
                   }`} />
                   <div className={`ml-3 transition-opacity duration-300 ${
-                    sidebarOpen || 'lg:opacity-100' ? 'opacity-100' : 'opacity-0 lg:opacity-100'
+                    sidebarOpen ? 'opacity-100' : 'opacity-0 lg:opacity-100'
                   }`}>
                     <span className="text-sm font-medium">{item.label}</span>
                     <p className="text-xs text-text-muted">{item.description}</p>
@@ -106,7 +106,7 @@ export const FuturisticLayout: React.FC = () => {
           >
             <LogOutIcon className="w-5 h-5 text-text-muted group-hover:text-red-400 transition-colors" />
             <div className={`ml-3 transition-opacity duration-300 ${
-              sidebarOpen || 'lg:opacity-100' ? 'opacity-100' : 'opacity-0 lg:opacity-100'
+              sidebarOpen ? 'opacity-100' : 'opacity-0 lg:opacity-100'
             }`}>
               <span className="text-sm font-medium group-hover:text-red-400">Sair</span>
               <p className="text-xs text-text-muted">Logout seguro</p>

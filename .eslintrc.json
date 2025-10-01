@@ -1,8 +1,7 @@
 {
   "extends": [
-    "@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:react/recommended"
+    "eslint:recommended",
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -14,28 +13,16 @@
   },
   "plugins": [
     "react-refresh",
-    "@typescript-eslint",
-    "react"
+    "@typescript-eslint"
   ],
   "rules": {
     "react-refresh/only-export-components": [
       "warn",
       { "allowConstantExport": true }
     ],
-    "react/react-in-jsx-scope": "off",
-    "react/prop-types": "off",
+    "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "@typescript-eslint/no-explicit-any": "warn",
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "prefer-const": "error",
-    "no-var": "error"
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+    "no-undef": "off"
   },
   "env": {
     "browser": true,

@@ -4,7 +4,7 @@ import { useAuth } from '../contexts/AuthContext';
 import { Target, Calculator, Save, Trash2, TrendingUp, TrendingDown, History } from 'lucide-react';
 import { SaldoGauge } from '../components/SaldoGauge';
 
-interface MetaSaldo {
+interface IMetaSaldo {
   id: string;
   valor_meta: number;
   ativa: boolean;
@@ -30,7 +30,7 @@ interface DadosFinanceiros {
 export const MetaSaldo: React.FC = () => {
   const { user } = useAuth();
   const [loading, setLoading] = useState(true);
-  const [meta, setMeta] = useState<MetaSaldo | null>(null);
+  const [meta, setMeta] = useState<IMetaSaldo | null>(null);
   const [simulacoes, setSimulacoes] = useState<Simulacao[]>([]);
   const [dadosFinanceiros, setDadosFinanceiros] = useState<DadosFinanceiros>({
     totalReceitas: 0,
