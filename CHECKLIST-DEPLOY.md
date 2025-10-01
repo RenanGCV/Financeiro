@@ -20,10 +20,11 @@
 ### Opção 1: Vercel
 - [ ] Conta Vercel criada
 - [ ] Repositório conectado
+- [ ] Arquivo `vercel.json` corrigido (sem `functions`)
 - [ ] Variáveis de ambiente configuradas:
   - [ ] `VITE_SUPABASE_URL`
   - [ ] `VITE_SUPABASE_ANON_KEY`
-- [ ] Deploy realizado
+- [ ] Deploy realizado sem erros
 
 ### Opção 2: Netlify
 - [ ] Conta Netlify criada
